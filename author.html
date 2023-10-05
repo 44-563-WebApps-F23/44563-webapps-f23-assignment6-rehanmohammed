@@ -25,20 +25,49 @@
             guess = document.getElementById("guessAuthor").value
             
             out = document.getElementById("result")
-            if(hidden==guess){
-              
+            if(hidden==guess){              
                 alert('You got it right')
                 good++;
                 out.innerHTML="Results: Good-"+good+", Oops-"+oops
-            } else {
-             
+            } else {             
                 alert('Sorry');
                 oops++
                 out.innerHTML="Results: Good-"+good+",Oops-"+oops
             }
         }
-        </script>
 
+
+        </script>
+       </script>
+    </script>
+    <div>
+    <img id="imagenames" src="./Oaty.JPG" alt="Image of Los Angeles" width="100" height="100" onclick="selectImage()">
+    </div>
+    <script>
+    let useImage = 1;
+            function selectImage() {
+                var image = document.getElementById("imagenames");
+                switch (useImage) {
+                    case 1: {
+                        image.src = "mangalore.JPG";
+                        useImage = 2;
+                        break;
+                    }
+                    case 2: {
+                        image.src = "Oaty.JPG";
+                        useImage = 3;
+                        break;
+                    }
+                    case 3: {
+                        image.src = "Hyderabad.JPG";
+                        useImage = 1;
+                        break;
+                    }
+                }
+            }
+    </script>
+    
+     
 
 
     </body>
